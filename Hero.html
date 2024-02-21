@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Motorcycles</title>
+    <button type="submit">Home</button>
+    <link rel="stylesheet" href="hero.css">
+
+</head>
+<body>
+    <div class="center">
+       <nav><h1><b>Hero Motorcycles</b></h1></nav>
+        
+        <div class="card">
+            <h2>Hero Passion Plus</h2>
+            <img src="plus.jpg" alt="Hero Passion Plus">
+            <p><strong>Engine Capacity:</strong> 199.5 cc</p>
+            <p><strong>Mileage:</strong> 55 kmpl</p>
+            <p><strong>Transmission:</strong> 6 Speed Manual</p>
+            <p><strong>Model:</strong> 2021</p>
+            <p><strong>Price:</strong> ₹65,000</p>
+            <button onclick="addToCart('Passion Plus', 65000)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h2>Hero Splendor Plus</h2>/
+            <img src="splendor.jpg" alt="Hero Splendor Plus"> 
+            <p><strong>Engine Capacity:</strong> 99.5 cc</p>
+            <p><strong>Mileage:</strong> 60 kmpl</p>
+            <p><strong>Transmission:</strong> 4 Speed Manual</p>
+            <p><strong>Model:</strong> 2022</p>
+            <p><strong>Price:</strong> ₹74,000</p>
+            <button onclick="addToCart('Splendor Plus', 74000)">Add to Cart</button>
+        </div>
+    
+        <div class="card">
+            <h2>Hero Xtreme 125R</h2>
+            <img src="125R.png" alt="Hero Xtreme 125R"> 
+            <p><strong>Engine Capacity:</strong> 124.5cc</p>
+            <p><strong>Mileage:</strong> 66 kmpl</p>
+            <p><strong>Transmission:</strong> 5 Speed Manual</p>
+            <p><strong>Model:</strong> 2023</p>
+            <p><strong>Price:</strong> ₹1,52,000</p>
+            <button onclick="addToCart('Xtreme 125R', 152000)">Add to Cart</button>
+        </div>
+        
+        <!-- Cart section -->
+        <div class="card" id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <p>Total: ₹<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        let cartItems = [];
+        let total = 0;
+
+        function addToCart(itemName, price) {
+            cartItems.push({ name: itemName, price: price });
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartList = document.getElementById("cart-items");
+            cartList.innerHTML = "";
+            total = 0;
+
+            cartItems.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = `${item.name} - ₹${item.price}`;
+                cartList.appendChild(li);
+                total += item.price;
+            });
+
+            document.getElementById("cart-total").textContent = total;
+        }
+
+        function checkout() {
+            alert(`Thank you for your purchase! Total amount: ₹${total}`);
+            cartItems = [];
+            total = 0;
+            updateCart();
+        }
+    </script>
+</body>
+</html>

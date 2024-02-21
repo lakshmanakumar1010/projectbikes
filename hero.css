@@ -1,0 +1,24 @@
+/* Centering content */
+.center {
+    text-align: center;
+}
+/* Styling for motorcycle cards */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+/* Styling for images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+#home{
+    background-color: black;
+color:whitesmoke;
+border-radius: 2px;
+}

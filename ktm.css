@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}header {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+#blue {
+    margin: 0;
+    font-size: 24px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+.motorcycle {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.motorcycle img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+.motorcycle-details {
+    margin-top: 20px;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
